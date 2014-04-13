@@ -20,4 +20,3 @@ C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\Inser
 C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.g.resources
 C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.Properties.Resources.resources
 C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.csproj.GenerateResource.Cache
-C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\bin\Debug\SgmlReaderDll.dll

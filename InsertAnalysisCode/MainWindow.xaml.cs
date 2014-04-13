@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
-using System.Xml.Linq;
-using Sgml;
 
 namespace InsertAnalysisCode
 {
@@ -112,31 +102,10 @@ namespace InsertAnalysisCode
             /// 
             string[] filePathList = GetHTMLFilePathList();
 
-            /// XMLに変換
-            /// 
-            //List<Document> xmlList = CreateXml(filePathList);
-
-            //Debug.WriteLine("CreateXml End.");
-
             /// <HEAD>内にコード挿入
             /// 
-            InsertGoogleCode(filePathList);
-
-            /// ファイルへ上書きする
-            /// 
-            //ReWriteFile(xmlList);
-            
+            InsertGoogleCode(filePathList);            
         }
-
-        //private void ReWriteFile(List<Document> docList)
-        //{
-        //    foreach (var doc in docList)
-        //    {
-        //        /// ファイル出力する
-        //        /// 
-        //        doc.XML.Save(doc.Path);
-        //    }
-        //}
 
         /// <summary>
         /// Googleアナリティクスコードを挿入する
@@ -181,50 +150,6 @@ namespace InsertAnalysisCode
             var sw = new StreamWriter(filePath, false, Encoding.GetEncoding("Shift_JIS"));
             sw.Write(rs);
             sw.Close();
-             
-            /// HEADタグを抽出する
-            /// 
-            //XElement head = xml.XML.Element("HEAD");
-
-            ///// HEADタグ内にGoogleCodeを追加する
-            ///// 
-            //head.Add( this.txtBoxCode );
-        }
-
-        /// <summary>
-        /// HTMLをXMLへ変換する
-        /// </summary>
-        /// <param name="filePathList"></param>
-        /// <returns></returns>
-        //private List<Document> CreateXml(string[] filePathList)
-        //{
-
-        //    var xmlList = new List<Document>();
-
-        //    /// XMLへ変換する
-        //    foreach (var filePath in filePathList)
-        //    {
-        //        /// ファイル開く
-        //        var xml = XDocument.Load( filePath );
-
-        //        var doc = new Document(filePath);
-        //        doc.XML = xml;
-                
-        //        xmlList.Add(doc);
-        //    }
-
-        //    return xmlList;
-        //}
-
-        private XDocument XmlFmHtml(string filePath)
-        {
-            XDocument xml;
-            using (var sgmlReader = new SgmlReader() { Href = filePath })
-            {
-                xml = XDocument.Load(sgmlReader);
-            }
-
-            return xml;
         }
 
         private string[] GetHTMLFilePathList()
