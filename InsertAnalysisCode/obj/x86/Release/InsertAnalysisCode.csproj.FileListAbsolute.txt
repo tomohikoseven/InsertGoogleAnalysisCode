@@ -1,0 +1,19 @@
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Release\MainWindow.baml
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Release\MainWindow.g.cs
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Release\App.g.cs
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode_MarkupCompile.cache
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode.g.resources
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode.Properties.Resources.resources
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode.csproj.GenerateResource.Cache
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\bin\Release\InsertAnalysisCode.exe
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\bin\Release\InsertAnalysisCode.pdb
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Release\MainWindow.baml
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Release\MainWindow.g.cs
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Release\App.g.cs
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode_MarkupCompile.cache
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode.g.resources
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode.Properties.Resources.resources
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode.csproj.GenerateResource.Cache
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode.exe
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Release\InsertAnalysisCode.pdb
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\bin\Release\SgmlReaderDll.dll

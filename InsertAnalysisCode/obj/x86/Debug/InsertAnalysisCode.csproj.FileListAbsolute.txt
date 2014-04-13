@@ -1,0 +1,23 @@
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\bin\Debug\InsertAnalysisCode.exe
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\bin\Debug\InsertAnalysisCode.pdb
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Debug\MainWindow.baml
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Debug\MainWindow.g.cs
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Debug\App.g.cs
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode_MarkupCompile.cache
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.g.resources
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.Properties.Resources.resources
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.csproj.GenerateResource.Cache
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.exe
+C:\Users\tomohiko\AppData\Local\Temporary Projects\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.pdb
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.exe
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.pdb
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\bin\Debug\InsertAnalysisCode.exe
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\bin\Debug\InsertAnalysisCode.pdb
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\MainWindow.baml
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\MainWindow.g.cs
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\App.g.cs
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode_MarkupCompile.cache
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.g.resources
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.Properties.Resources.resources
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\obj\x86\Debug\InsertAnalysisCode.csproj.GenerateResource.Cache
+C:\Users\tomohiko\documents\visual studio 2010\Projects\InsertAnalysisCode\InsertAnalysisCode\bin\Debug\SgmlReaderDll.dll

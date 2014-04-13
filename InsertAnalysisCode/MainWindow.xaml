@@ -1,0 +1,48 @@
+﻿<Window x:Class="InsertAnalysisCode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="227" Width="499">
+    <Grid DataContext="{Binding}">
+        <Button Content="挿入" 
+                Height="23" 
+                HorizontalAlignment="Left" 
+                Margin="30,24,0,0" 
+                Name="btnInsert" 
+                IsEnabled="False"
+                VerticalAlignment="Top"
+                TabIndex="1"
+                Width="75" Click="btnInsert_Click" />
+        <TextBox Height="24" 
+                 HorizontalAlignment="Left" 
+                 Margin="129,60,0,0" 
+                 Name="txtFolderPath" 
+                 VerticalAlignment="Top"
+                 TabIndex="3"
+                 Width="328" TextChanged="txtFolderPath_TextChanged" />
+        <Button Content="フォルダ..." 
+                Height="23" 
+                HorizontalAlignment="Left" 
+                Margin="30,61,0,0" 
+                Name="btnFolder" 
+                VerticalAlignment="Top" 
+                Width="75"
+                TabIndex="2"
+                Click="btnFolder_Click" />
+        <TextBox Height="68" 
+                 HorizontalAlignment="Left" 
+                 Margin="129,90,0,0" 
+                 Name="txtBoxCode" 
+                 VerticalAlignment="Top" 
+                 Width="328" 
+                 AcceptsReturn="True" 
+                 TextWrapping="Wrap"
+                 TabIndex="4"
+                 VerticalScrollBarVisibility="Auto" TextChanged="txtBoxCode_TextChanged" />
+        <Label Content="AnalysisCode" 
+               Height="28" 
+               HorizontalAlignment="Left" 
+               Margin="30,90,0,0" 
+               Name="labelCode"
+               VerticalAlignment="Top" />
+    </Grid>
+</Window>
