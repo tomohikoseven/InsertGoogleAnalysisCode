@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.IO;
+using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace InsertAnalysisCode
 {
@@ -14,6 +16,10 @@ namespace InsertAnalysisCode
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static string NEWLINE = System.Environment.NewLine;     /// 解析文字
+        private static string SMALLHEAD = "<head>" + NEWLINE;           /// Googleコード挿入先の文字列(小文字)
+        private static string BIGHEAD = "<HEAD>" + NEWLINE;             /// Googleコード挿入先の文字列(大文字)
+
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +48,6 @@ namespace InsertAnalysisCode
             //ダイアログを表示する
             if (fbd.ShowDialog().ToString().Equals("OK"))
             {
-                //選択されたフォルダを表示する
                 this.txtFolderPath.Text = fbd.SelectedPath;
             }
 
@@ -52,15 +57,16 @@ namespace InsertAnalysisCode
 
         private void btnInsert_Click(object sender, RoutedEventArgs e)
         {
+
             try
             {
                 /// フォルダパスチェック
                 /// 
-                CheckFolderPath();
+                checkFolderPath();
 
                 /// HTMLにコードを挿入
                 /// 
-                InsertCode();
+                insertCode();
 
                 /// 処理が終了したメッセージ表示
                 /// 
@@ -85,7 +91,7 @@ namespace InsertAnalysisCode
         /// <summary>
         /// フォルダの存在チェック
         /// </summary>
-        private void CheckFolderPath()
+        private void checkFolderPath()
         {
             /// フォルダが存在しない場合
             if (!Directory.Exists(this.txtFolderPath.Text))
@@ -94,43 +100,68 @@ namespace InsertAnalysisCode
                 var error = new DirectoryNotFoundException(message);
                 throw error;
             }
+                
         }
 
-        private void InsertCode()
+        /// <summary>
+        /// HTMLに解析コードを挿入する
+        /// </summary>
+        private void insertCode()
         {
-            /// HTML Get
+            /// HTMLファイルのパスを取得
             /// 
-            string[] filePathList = GetHTMLFilePathList();
+            string[] filePathList = getHTMLFilePathList();
 
             /// <HEAD>内にコード挿入
             /// 
-            InsertGoogleCode(filePathList);            
+            insertGoogleCode(filePathList);            
+        }
+
+        /// <summary>
+        /// HTML(HTM含む)ファイルパスを取得する
+        /// </summary>
+        /// <returns>ファイルパスリスト</returns>
+        private string[] getHTMLFilePathList()
+        {
+            string[] htms = getFiles(@"*.htm");
+
+            return htms;
+        }
+
+        /// <summary>
+        /// フォルダ配下の指定された正規表現のファイルパスを取得する
+        /// </summary>
+        /// <param name="reg">正規表現</param>
+        /// <returns></returns>
+        private string[] getFiles(string reg)
+        {
+            string[] pathList = null;
+            pathList = Directory.GetFiles(this.txtFolderPath.Text, reg, SearchOption.AllDirectories);
+
+            return pathList;
         }
 
         /// <summary>
         /// Googleアナリティクスコードを挿入する
         /// </summary>
         /// <param name="xmlList"></param>
-        private void InsertGoogleCode(string[] filePathList)
+        private void insertGoogleCode(string[] filePathList)
         {
             /// 各xmlに対し、Codeを挿入する
             /// 
             foreach( var filePath in filePathList )
             {
                 /// Googleアナリティクスコードを挿入する
-                InsertCodeInHead( filePath );
+                insertCodeInHead( filePath );
             }
 
         }
-
-        private static string NEWLINE = System.Environment.NewLine;
-        private static string HEAD = "<head>" + NEWLINE;
 
         /// <summary>
         /// HEADタグ内にGoogleアナリティクスコードを挿入する
         /// </summary>
         /// <param name="xml"></param>
-        private void InsertCodeInHead(string filePath)
+        private void insertCodeInHead(string filePath)
         {
             Debug.WriteLine("[InsertCodeInHead]", filePath);
 
@@ -142,36 +173,15 @@ namespace InsertAnalysisCode
 
             
             /// <head>を<head>+Googleコードに置換する
-            /// 
-            var rs = s.Replace(HEAD, HEAD + this.txtBoxCode.Text + NEWLINE);
+            /// <HEAD>を<HEAD>+Googleコードに置換する
+            var small = s.Replace(SMALLHEAD, SMALLHEAD + this.txtBoxCode.Text + NEWLINE);
+            var big = small.Replace(BIGHEAD, BIGHEAD + this.txtBoxCode.Text + NEWLINE);
 
             /// ファイルに書き込む
             /// 
             var sw = new StreamWriter(filePath, false, Encoding.GetEncoding("Shift_JIS"));
-            sw.Write(rs);
+            sw.Write(big);
             sw.Close();
-        }
-
-        private string[] GetHTMLFilePathList()
-        {
-            string[] htmls = GetFiles( "*.html" );
-            string[] htms = GetFiles("*.htm");
-
-            return htmls.Concat( htms ).ToArray();
-        }
-
-        /// <summary>
-        /// フォルダ配下の指定された正規表現のファイルパスを取得する
-        /// </summary>
-        /// <param name="reg">正規表現</param>
-        /// <returns></returns>
-        private string[] GetFiles(string reg)
-        {
-            string[] pathList;
-
-            pathList = Directory.GetFiles( this.txtFolderPath.Text, reg, SearchOption.AllDirectories );
-
-            return pathList; 
         }
 
 
@@ -188,7 +198,7 @@ namespace InsertAnalysisCode
         private void btnInsertVisible()
         {
             /// フォルダテキストボックスとGoogleコード内の判定
-            /// 
+            /// ２つとも入力されていれば、挿入ボタンを活性化させる
             if (txtFolderPath.Text == string.Empty ||
                     txtBoxCode.Text == string.Empty)
             {
